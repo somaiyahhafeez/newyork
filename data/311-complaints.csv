@@ -1,0 +1,85 @@
+,Complaint Type,Incident Zip,count
+0,Abandoned Vehicle,11210,2
+1,Air Quality,10025,1
+2,Animal in a Park,10025,1
+3,Animal-Abuse,11210,2
+4,Bike Rack,11210,1
+5,Blocked Driveway,10016,1
+6,Blocked Driveway,10027,1
+7,Blocked Driveway,11210,5
+8,Boilers,10027,1
+9,Consumer Complaint,11210,2
+10,DOOR/WINDOW,10027,2
+11,DOOR/WINDOW,11210,2
+12,Dead/Dying Tree,10016,1
+13,Dead/Dying Tree,11210,1
+14,Derelict Vehicles,10027,2
+15,Derelict Vehicles,11210,2
+16,Dirty Condition,10016,1
+17,Dirty Condition,10025,1
+18,ELECTRIC,10025,2
+19,ELECTRIC,10027,1
+20,ELECTRIC,11210,2
+21,Elevator,10027,2
+22,Elevator,11210,1
+23,Encampment,10016,3
+24,FLOORING/STAIRS,10025,2
+25,FLOORING/STAIRS,10027,1
+26,FLOORING/STAIRS,11210,1
+27,Food Establishment,10016,2
+28,For Hire Vehicle Complaint,10016,4
+29,For Hire Vehicle Complaint,10025,1
+30,For Hire Vehicle Complaint,10027,1
+31,GENERAL,11210,2
+32,General Construction/Plumbing,10016,1
+33,General Construction/Plumbing,10025,1
+34,General Construction/Plumbing,11210,6
+35,HEAT/HOT WATER,10016,4
+36,HEAT/HOT WATER,10025,16
+37,HEAT/HOT WATER,10027,12
+38,HEAT/HOT WATER,11210,4
+39,Homeless Person Assistance,10016,1
+40,Homeless Person Assistance,10025,2
+41,Illegal Dumping,10016,1
+42,Illegal Parking,10016,4
+43,Illegal Parking,10025,4
+44,Illegal Parking,10027,10
+45,Illegal Parking,11210,10
+46,Lead,10016,3
+47,Lead,10027,1
+48,Lost Property,10016,2
+49,Missed Collection,10025,1
+50,Noise,10016,14
+51,Noise,10025,12
+52,Noise,10027,12
+53,Noise,11210,10
+54,Non-Emergency Police Matter,10027,1
+55,Overgrown Tree/Branches,11210,1
+56,PAINT/PLASTER,10025,2
+57,PAINT/PLASTER,10027,1
+58,PAINT/PLASTER,11210,1
+59,PLUMBING,11210,2
+60,Panhandling,10025,1
+61,Residential Disposal Complaint,10025,1
+62,Rodent,10025,3
+63,Rodent,10027,1
+64,SAFETY,11210,1
+65,Scaffold Safety,11210,1
+66,School Maintenance,10025,1
+67,Sewer,10016,1
+68,Sewer,10025,2
+69,Sewer,11210,1
+70,Sidewalk Condition,10016,1
+71,Street Condition,10016,2
+72,Street Condition,10025,2
+73,Street Condition,11210,2
+74,UNSANITARY CONDITION,10016,1
+75,UNSANITARY CONDITION,10025,1
+76,UNSANITARY CONDITION,10027,1
+77,UNSANITARY CONDITION,11210,5
+78,Vendor Enforcement,10016,2
+79,WATER LEAK,10025,3
+80,WATER LEAK,10027,1
+81,WATER LEAK,11210,2
+82,Water System,10016,5
+83,Water System,11210,1

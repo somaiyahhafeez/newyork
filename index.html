@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/somaiyah_favicon.png">
+    <link rel="shortcut icon" type="image/png" href="viz/statue.png">
+    <title>New York City in Data: A Day in the Life of a City That Never Sleeps
+    </title>
+    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
+    <style>
+        body {
+            margin: 0;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.8;
+        }
+        .footer a {
+            color: #f5f5f5;
+        }
+        .banner {
+    background: url('viz/IMG_9696.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+}
+.footer .content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer {
+            text-align: center;
+            padding: 2em 0;
+            background: #222;
+            color: #fff;
+            margin-top: 2em;
+        }
+
+    
+        .content {
+            max-width: 700px;
+            margin: auto;
+            padding: 2em 1.5em;
+        }
+    
+        h1, h2 {
+            color: #222;
+        }
+    
+        a {
+            color: #000000;
+        }
+    
+        .header {
+            padding: 2em 0;
+        }
+        .footer-inner {
+    max-width: 100%;
+    padding: 1.5em;
+}
+
+    
+        .byline {
+            font-size: 1.2em;
+            color: #000000;
+            margin-bottom: 1em;
+        }
+    
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 0.3em;
+        }
+    
+        .subhead {
+            font-size: 1.1em;
+            color: #666;
+        }
+    
+        .iframe-container {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 2em;
+        }
+    
+        .iframe-container iframe {
+            width: 100%;
+            border: none;
+        }
+    
+        figure {
+            margin: 0;
+            padding-bottom: 1.2em;
+            width: 100%;
+            display: block;
+        }
+    
+        figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    
+        figcaption {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 0.5em;
+            color: #666;
+            width: 100%;
+        }
+    
+        blockquote {
+            border-left: 4px solid #18a1cd;
+            padding-left: 1em;
+            margin-left: 0;
+            font-style: italic;
+        }
+        .video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2em;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-wrapper figcaption {
+    font-size: 0.9em;
+    text-align: center;
+    color: #666;
+    margin-top: 0.5em;
+    padding: 0 1em;
+}
+
+        .footer {
+            text-align: center;
+            padding: 2em 0;
+            background: #222;
+            color: #fff;
+            margin-top: 2em;
+        }
+    
+        .footer a {
+            color: #f5f5f5;
+        }
+    
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+    
+            .header h1 {
+                font-size: 2.5em;
+            }
+    
+            .banner {
+                height: 300px;
+            }
+    
+            figure {
+                margin: 1em 0;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2em;
+            }
+    
+            .banner {
+                height: 200px;
+            }
+        }
+    
+        /* Responsive ai2html graphic styles */
+        #g-311-complaints_svg-box,
+        #g-mobile-311-box {
+            width: 100%;
+            display: block;
+            margin: 2em auto;
+            box-sizing: border-box;
+        }
+    
+        #g-mobile-311-box {
+            display: none;
+        }
+    
+        @media (max-width: 600px) {
+            #g-311-complaints_svg-box {
+                display: none;
+            }
+    
+            #g-mobile-311-box {
+                display: block;
+            }
+        }
+    
+        #g-311-complaints_svg-box .g-artboard {
+            width: 100% !important;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #g-311-complaints_svg-Artboard_1 img,
+#g-311-complaints_svg-box .g-aiImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100% !important;
+    height: auto;
+}
+
+    
+        #g-311-complaints_svg-box .g-aiAbs {
+            position: absolute;
+        }
+    
+        #g-311-complaints_svg-box .g-aiPointText p {
+            white-space: nowrap;
+        }
+    
+        #g-311-complaints_svg-Artboard_1 p {
+            font-family: arial, helvetica, sans-serif;
+            line-height: 17px;
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            padding: 0;
+            margin: 0;
+        }
+    
+        #g-311-complaints_svg-Artboard_1 .g-pstyle0 {
+            font-weight: bold;
+            line-height: 22px;
+            font-size: 18px;
+        }
+    
+        #g-311-complaints_svg-Artboard_1 .g-pstyle1 {
+            height: 17px;
+        }
+    
+        #g-311-complaints_svg-Artboard_1 .g-pstyle2 {
+            font-weight: bold;
+        }
+    
+        #g-311-complaints_svg-Artboard_1 .g-pstyle3 {
+            color: rgb(77, 77, 77);
+        }
+    
+        #g-311-complaints_svg-Artboard_1 .g-pstyle4 {
+            line-height: 13px;
+            font-size: 11px;
+            text-align: justify;
+        }
+    
+        #g-311-complaints_svg-Artboard_1 .g-pstyle5 {
+            line-height: 13px;
+            font-size: 11px;
+        }
+    
+        /* Optional layout styles */
+        .heatmap-heading {
+            max-width: 800px;
+            margin: 0 auto 1em auto;
+            padding: 0 1em;
+        }
+    
+        .heatmap-heading h2 {
+            font-size: 1.6em;
+            margin-bottom: 0.2em;
+        }
+    
+        .heatmap-subhead {
+            font-size: 1em;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+    </style>
+    
+
+<body>
+    <div class="banner"></div>
+    <div class="content">
+        <div class="header">
+            <h1>New York City in Data </h1>
+            <p class="subhead">I looked at a day in New York City from my and my roommate's perspective using MTA data and 311 complaints.</p>
+        </div>
+        <div class="byline">
+            <p>By<a href="https://somaiyahhafeez.github.io"> Somaiyah Hafeez</a></p>
+        </div>
+        <p>They say New York City is the city of dreams.</p>
+        <p>From being featured in so many classic Hollywood as well as Bollywood movies, almost everyone who first comes to the city feels like they are living in a film—the Brooklyn Bridge in Kal Ho Na Ho (Tomorrow May Not Come) where Shah Rukh Khan stretches his arms in his quintessential pose; The Godfather’s opening scene shot in Little Island; and the Spiderman scene in Central Park’s Bow Bridge. When you find yourself in these places—they feel strangely familiar and alien at the same time—as if you’re the main character of a movie, as if this was scripted and destined.</p>
+        <figure class="video-wrapper">
+            <video controls>
+                <source src="viz/IMG_8918.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>
+                On August 17th, 2024, I stepped onto the Brooklyn Bridge for the first time — a view I’d seen in movies, now part of my own story.
+            </figcaption>
+          </figure>
+          
+          
+        <p>But what is it really like living in the Big Apple?</p>
+        <p>My friend, Bibi Emina, and I moved to the city in August 2024—for about eight months now we have called this city that “never sleeps” our home. But there is so much that the movies do not tell you about the city. </p>
+        <p>I tried to paint a picture of an average day in our life in the city by turning to data.</p>
+    
+        <div id="subway-section">
+
+            <h1>The Subway: New York’s Shared Rhythm</h1>        
+            <p>While New York City’s unique subway system has been featured countless times in many movies and television series, they do not show the everyday chaos on the trains: from struggling to make your way in a throng of people during the morning and evening rush hours to the cacophony of noises—musicians serenading tired commuters, immigrant vendors selling candy and snacks, the occasional, inevitable fight—and the sharp metallic scream of the train as it barrels into the station.</p>
+            <p>I do not take the subway everyday for school, Emina does. She commutes for more than an hour to reach her school in Brooklyn.</p>
+            <p>“The A train, which I take for school, is packed with people until we have reached Chambers or Canal street”, she told me.</p>
+            <p>Emina rides the A train from 125th Street and Saint Nicholas Avenue to Jay St-Metrotech for her college and to 34th Street for her work.</p>
+            <p>“I just look around to see if someone is exiting at the next stop to take their seat”, she said when I asked her what she thinks or feels during her long commutes. “I look at people sometimes, when I am not exhausted and listen to their conversation because it is so fun.”</p>
+        </div>
+        <iframe title="My roommate's commute to work on a Monday" aria-label="Locator map" id="datawrapper-chart-SwuLi" src="https://datawrapper.dwcdn.net/SwuLi/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="565" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
+        </script>
+
+        <h1>311 Complaints: The City’s Roared Complaints </h1>
+        <p>During the night, I toss and turn in my bed—unable to sleep, mostly due to my own thoughts, but also because of the rap music blasting outside my window and the loud fights that break out on the street corner. I have never filed a noise complaint. Not once. Mostly because I’m timid. Partly because I still feel like a stranger in this city. What rights does an outsider have?
+        <p>But the city won’t have it. New Yorkers don’t stay quiet. They roar. They scream. They pick up the phone and lodge a complaint.</p>
+        <p>On March 24th, 2025, the city received thousands of such screams.</p>
+        
+<!-- Generated by ai2html v0.121.1 - 2025-04-13 03:45 -->
+<!-- ai file: 311-complaints.svg -->
+<style media="screen,print">
+	#g-311-complaints_svg-box ,
+	#g-311-complaints_svg-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-311-complaints_svg-box p {
+		margin:0;
+	}
+	#g-311-complaints_svg-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-311-complaints_svg-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-311-complaints_svg-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-311-complaints_svg-box .g-aiPointText p { white-space: nowrap; }
+	#g-311-complaints_svg-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-311-complaints_svg-Artboard_1 p {
+		font-family:arial,helvetica,sans-serif;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		font-weight:regular;
+		position:static;
+	}
+	#g-311-complaints_svg-Artboard_1 .g-pstyle0 {
+		font-weight:bold;
+		line-height:22px;
+		height:22px;
+		font-size:18px;
+	}
+	#g-311-complaints_svg-Artboard_1 .g-pstyle1 {
+		height:17px;
+	}
+	#g-311-complaints_svg-Artboard_1 .g-pstyle2 {
+		font-weight:bold;
+		height:17px;
+	}
+	#g-311-complaints_svg-Artboard_1 .g-pstyle3 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+		text-align:justify;
+	}
+	#g-311-complaints_svg-Artboard_1 .g-pstyle4 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+	}
+	#g-311-complaints_svg-Artboard_1 .g-pstyle5 {
+		height:17px;
+		color:rgb(77,77,77);
+	}
+
+</style>
+
+<div id="g-311-complaints_svg-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-311-complaints_svg-Artboard_1" class="g-artboard" style="max-width: 714px;max-height: 453px" data-aspect-ratio="1.577" data-min-width="0">
+<div style="padding: 0 0 63.4006% 0;"></div>
+		<img id="g-311-complaints_svg-Artboard_1-img" class="g-complaints_svg-Artboard_1-img g-aiImg" alt="" src="ai2html-output/311-complaints_svg-Artboard_1.jpg"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.0005%;margin-top:-13.1px;left:0.1986%;width:568px;">
+			<p class="g-pstyle0">311 complaints across four zip codes we live, study and work in</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.4504%;margin-top:-9.8px;left:0.2944%;width:644px;">
+			<p class="g-pstyle1">On March 24, 2025 19 parking related complaints were filed in neighborhoods in the zip code</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.9849%;margin-top:-9.8px;left:0.2944%;width:266px;">
+			<p class="g-pstyle1">where my roommate goes to college</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.0302%;margin-top:-9.8px;left:0.6339%;width:60px;">
+			<p class="g-pstyle1">11210</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9461%;margin-top:-10.1px;left:80.9734%;width:90px;">
+			<p class="g-pstyle2">Complaint</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9461%;margin-top:-10.1px;left:90.5588%;width:26px;">
+			<p class="g-pstyle2"> </p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9461%;margin-top:-10.1px;left:91.0966%;width:72px;">
+			<p class="g-pstyle2">Volume</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.1219%;margin-top:-7.6px;left:91.623%;width:34px;">
+			<p class="g-pstyle3">15</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.1219%;margin-top:-7.6px;left:91.6498%;width:34px;">
+			<p class="g-pstyle4">15</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.9236%;margin-top:-9.8px;left:0.5054%;width:61px;">
+			<p class="g-pstyle5">10016</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.9819%;margin-top:-7.6px;left:91.623%;width:34px;">
+			<p class="g-pstyle3">10</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:45.2028%;margin-top:-7.6px;left:91.6498%;width:34px;">
+			<p class="g-pstyle4">10</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:50.0627%;margin-top:-7.6px;left:91.623%;width:28px;">
+			<p class="g-pstyle3">5</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:50.0628%;margin-top:-7.6px;left:91.6498%;width:28px;">
+			<p class="g-pstyle4">5</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.1436%;margin-top:-7.6px;left:91.623%;width:28px;">
+			<p class="g-pstyle3">0</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.1436%;margin-top:-7.6px;left:91.6498%;width:28px;">
+			<p class="g-pstyle4">0</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:61.1425%;margin-top:-9.8px;left:0.2939%;width:61px;">
+			<p class="g-pstyle5">10025</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:81.245%;margin-top:-9.8px;left:0.2939%;width:61px;">
+			<p class="g-pstyle5">10027</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.9412%;margin-top:-9.8px;left:13.3059%;width:58px;">
+			<p class="g-pstyle1">Noise</p>
+		</div>
+		<div id="g-ai0-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.9412%;margin-top:-9.8px;left:31.9193%;width:52px;">
+			<p class="g-pstyle1">Heat</p>
+		</div>
+		<div id="g-ai0-21" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.9412%;margin-top:-9.8px;left:45.8745%;width:84px;">
+			<p class="g-pstyle1">Sanitation</p>
+		</div>
+		<div id="g-ai0-22" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.9412%;margin-top:-9.8px;left:62.0253%;width:69px;">
+			<p class="g-pstyle1">Parking</p>
+		</div>
+		<div id="g-ai0-23" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:97.7525%;margin-top:-7.5px;left:0.563%;width:418px;">
+			<p class="g-pstyle4">Source: Office of Technology and Innovation (OTI), accessed via NYC Open Data</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2025-04-13 03:45 -->
+
+<!-- ai file: mobile-311.ai -->
+<style media="screen,print">
+	#g-mobile-311-box ,
+	#g-mobile-311-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-mobile-311-box p {
+		margin:0;
+	}
+	#g-mobile-311-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-mobile-311-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-mobile-311-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-mobile-311-box .g-aiPointText p { white-space: nowrap; }
+	#g-mobile-311-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-mobile-311-Artboard_1 p {
+		font-family:arial,helvetica,sans-serif;
+		line-height:10px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:8px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		font-weight:regular;
+		position:static;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle0 {
+		font-weight:bold;
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle1 {
+		height:10px;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle2 {
+		font-weight:bold;
+		line-height:11px;
+		height:11px;
+		font-size:9px;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle3 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+
+</style>
+
+
+<!-- Generated by ai2html v0.121.1 - 2025-04-13 03:50 -->
+<!-- ai file: mobile-311.ai -->
+<style media="screen,print">
+	#g-mobile-311-box ,
+	#g-mobile-311-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-mobile-311-box p {
+		margin:0;
+	}
+	#g-mobile-311-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-mobile-311-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-mobile-311-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-mobile-311-box .g-aiPointText p { white-space: nowrap; }
+	#g-mobile-311-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-mobile-311-Artboard_1 p {
+		font-family:arial,helvetica,sans-serif;
+		line-height:10px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:8px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		font-weight:regular;
+		position:static;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle0 {
+		font-weight:bold;
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle1 {
+		height:10px;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle2 {
+		font-weight:bold;
+		line-height:11px;
+		height:11px;
+		font-size:9px;
+	}
+	#g-mobile-311-Artboard_1 .g-pstyle3 {
+		line-height:9px;
+		height:9px;
+		font-size:7px;
+		text-align:justify;
+	}
+
+</style>
+
+<div id="g-mobile-311-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-mobile-311-Artboard_1" class="g-artboard" style="max-width: 360px;max-height: 307px" data-aspect-ratio="1.173" data-min-width="0">
+<div style="padding: 0 0 85.2297% 0;"></div>
+		<img id="g-mobile-311-Artboard_1-img" class="g-mobile-Artboard_1-img g-aiImg" alt="" src="ai2html-output/mobile-311-Artboard_1.jpg"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.9428%;margin-top:-8.1px;left:0.6639%;width:364px;">
+			<p class="g-pstyle0">311 complaints across four zip codes we live, study and work in </p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.9507%;margin-top:-10.5px;left:0.7818%;width:341px;">
+			<p class="g-pstyle1">On March 24, 2025 19 parking related complaints were filed in neighborhoods in the zip code</p>
+			<p class="g-pstyle1">where my roommate goes to college</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.3117%;margin-top:-5.7px;left:0.8853%;width:43px;">
+			<p class="g-pstyle1">11210</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.745%;margin-top:-6.7px;left:86.9434%;width:46px;">
+			<p class="g-pstyle2">Count</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.4612%;margin-top:-5.4px;left:92.6571%;width:29px;">
+			<p class="g-pstyle3">15</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:45.2149%;margin-top:-5.7px;left:0.8853%;width:44px;">
+			<p class="g-pstyle1">10016</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.3499%;margin-top:-5.4px;left:92.6571%;width:29px;">
+			<p class="g-pstyle3">10</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:53.2387%;margin-top:-5.4px;left:92.6571%;width:26px;">
+			<p class="g-pstyle3">5</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.1274%;margin-top:-5.4px;left:92.6571%;width:26px;">
+			<p class="g-pstyle3">0</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.4885%;margin-top:-5.7px;left:0.8853%;width:44px;">
+			<p class="g-pstyle1">10025</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.4139%;margin-top:-5.7px;left:1.1182%;width:44px;">
+			<p class="g-pstyle1">10027</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.8433%;margin-top:-5.7px;left:52.9237%;width:57px;">
+			<p class="g-pstyle1">Sanitation</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.8433%;margin-top:-5.7px;left:72.5228%;width:48px;">
+			<p class="g-pstyle1">Parking</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.8433%;margin-top:-5.7px;left:17.6489%;width:42px;">
+			<p class="g-pstyle1">Noise</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.8433%;margin-top:-5.7px;left:31.7558%;width:48px;">
+			<p class="g-pstyle1">Parking</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:97.0357%;margin-top:-5.7px;left:0.431%;width:280px;">
+			<p class="g-pstyle1">Source: Office of Technology and Innovation (OTI), accessed via NYC Open Data</p>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- End ai2html - 2025-04-13 03:50 -->
+ <p>In just four zip codes, chosen because those are the neighborhoods we spend our days in, the variety of complaints paints a picture more vivid than any film set could capture.</p>
+
+<p> In 10027, where we live, there were 12 noise complaints, 13 about parking, and 13 more about heat. Emina, like me, doesn't like how noisy the neighborhood can get. When I told her about the 311 complaints, she said she didn't know that one can file a complaint about noise but maybe she will file one now.</p>
+<p>In 10025, just a few blocks south and where I go to school, heat complaints were the loudest at 16, but noise was not far behind at 12.</p>
+<p>Parking complaints dominated in Brooklyn neighborhood where Emina goes to school, at 19 complaints--the highest in these categories.</p>
+
+<p>The movies don’t show the heat complaints or the aching feet after a long commute. They also skip the 311 calls and the tossing and turning because of the noise outside your apartment. But maybe that’s what makes this city real. </p>
+    
+</div>
+  <div class="footer">
+    <div class="footer-inner">
+
+        <p>You can find the code for this template <a href="https://github.com/somaiyahhafeez/newyork/">here</a>.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
